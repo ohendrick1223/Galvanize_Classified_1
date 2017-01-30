@@ -28,3 +28,9 @@ exports.seed = function(knex, Promise) {
     ); //This line
   });
 };
+
+//Line 26, makes sure that nothing is in database to begin with in order to avoid primary key id conflicts. You query the database using knex, and then get rid of everything, in order to properly seed.
+
+//Line 26, you can tell this is a promise because it's 'thenable'. Return Promise.all says, you have all these different async requests (all the inserts for different columns are there own promises). You fire off all the promises simulataneously, so the promise.all only resolves once they ALL resolve. If any of them should fail, the promise.all will break.
+
+//timestamps, new DATE, is this an object constructor? TODO: look up new Date.
