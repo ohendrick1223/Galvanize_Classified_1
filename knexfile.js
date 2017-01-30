@@ -4,11 +4,11 @@ module.exports = {
 
   development: {
     client: 'pg', //technology you're using could be sql, sql lite, post-gres etc...
-    connection: 'postgres://localhost/classified_dev'
+    connection: 'postgres://localhost/classifieds_dev'
    },
   test: {
     client: 'pg',
-    connection: 'postgres://locahost/classified_test'
+    connection: 'postgres://locahost/classifieds_test'
    },
   production: {
     client: 'pg',
